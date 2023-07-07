@@ -2,7 +2,7 @@
 # https://gist.github.com/nickmerwin/3bd36e82523274f3e54212a3fb095e32
 
 #FROM thomasweise/docker-texlive-thin
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 #FROM phusion/baseimage:latest
 
 ENV HOME /root
@@ -53,7 +53,7 @@ RUN gem install softcover
 # ==============================================================================
 # sphinx
 # ==============================================================================
-pip install sphinx myst_parser
+RUN pip install sphinx myst_parser
 # ==============================================================================
 # Health check
 # ==============================================================================
